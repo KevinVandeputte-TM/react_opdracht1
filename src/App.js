@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Passengers from './components/Passengers'
+import Students from './components/Students';
+import Course from './components/Course';
 
 function App() {
-  return (
-    <Passengers />
+  return ( 
+    <div>
+      <Students />
+      <Course />
+
+    </div>
+   
+
   );
 }
 
