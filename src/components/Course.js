@@ -12,8 +12,6 @@ function CourseInfo(props) {
 }
 
 
-
-
 class Course extends Component {
     constructor(props) {
         super(props);

@@ -1,0 +1,42 @@
+.card-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 250px;
+    padding-bottom: 15px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(60deg, #2AAA8A, #4169E1);
+    padding: 5px;
+    margin-top: -45px;
+}
+
+.card h3{
+    margin: 5px 0;
+}
+
+.block-title{
+    margin-bottom: 50px;
+}
+
+.form-area{
+    border: 10ps solid black;
+    width: 100%vw;
+    margin: 25px;
+    margin-bottom: 75px;
+}
