@@ -3,11 +3,13 @@ import StudentForm from './StudentForm'
 import './Student.css'
 
 
-function StudentOverview(props) {
+const StudentOverview = (props) => {
     return (  
         <div className='card-row'>
             {props.list.map((student) =>(
-                <StudentCard student= {student}/>
+                <StudentCard student= {student}
+                        key={student.id}
+                />
             ))}  
         </div>  
     );
@@ -18,7 +20,7 @@ const StudentCard = (props) => {
         
         <div className='card'>
             <img style={{backgroundImage:`linear-gradient(${props.student.color1},${props.student.color2})`}} src={props.student.thumb}/>
-            <h3>{props.student.name}  - <span>{props.student.grade}</span></h3>
+            <h3><span>{props.student.name}</span><span>{props.student.grade}</span></h3>
         </div>
         
     );
@@ -31,47 +33,41 @@ class Students extends Component
         super(props)
         this.state = {
             students: [
-                {id: 1, name: 'John Doe', grade: 'NaN', thumb:'./images/placeholder-person.png', color1:"#2AAA8A", color2:"#4169E1"},
-                {id: 2, name: 'Jane Doe', grade: 'NaN', thumb:'./images/placeholder-person.png', color1:"#2AAA8A", color2:"#4169E1" },
-                {id: 3, name: 'John Doe 2', grade: 'NaN', thumb:'./images/placeholder-person.png', color1:"#2AAA8A", color2:"#4169E1" },
-                {id: 4, name: 'Jane Doe 2', grade: 'NaN', thumb:'./images/placeholder-person.png', color1:"#2AAA8A", color2:"#4169E1" },
-                {id: 5, name: 'John Doe 3', grade: 'NaN', thumb:'./images/placeholder-person.png', color1:"#2AAA8A", color2:"#4169E1" },
-            ],
-            input: '',
-            isGraded: false
+                {id: 1, name: 'John Doe', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25"},
+                {id: 2, name: 'Jane Doe', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
+                {id: 3, name: 'John Doe 2', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
+                {id: 4, name: 'Jane Doe 2', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25"},
+                {id: 5, name: 'John Doe 3', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
+            ]
         }
 
-        this.handlePassStudent = this.handlePassStudent.bind(this);
-        this.handleFailStudent = this.handleFailStudent.bind(this);
+        this.adjustScoreStudent = this.adjustScoreStudent.bind(this)
     }
 
-    handlePassStudent(id, name, email){
-        this.setState((currentState) => {
-            const student = currentState.students.find((student) => student.id === id)
-            return{
-                students: currentState.students.filter((student) =>student.id !== id)
-                    .concat([{
-                        id, name, email, 
-                        passed: true
-                    }]),
-                isGraded: true
-            }
-        })
-    }
+    adjustScoreStudent(id, score){
 
-    handleFailStudent(id, name, email){
-        this.setState((currentState) => {
-            const student = currentState.students.find((student) => student.id === id)
-            return{
-                students: currentState.students.filter((student) =>student.id !== id)
-                    .concat([{
-                        id, name, email, 
-                        passed: false
-                    }]),
-                isGraded: true
-            }
-        })
+        const selectedstudent = this.state.students.filter((student) => student.id === parseInt(id))
+        const grade = score * 5;
+        
+        if (score >= 10) {
+            selectedstudent[0].color1 = "#009cab"
+            selectedstudent[0].color2 = "#009cab"
+        } else{
+            selectedstudent[0].color1 = "#f04c25"
+            selectedstudent[0].color2 = "#f04c25"
+        }
+        
+        selectedstudent[0].grade = grade
+        console.log('SELECTED STUDENT:', id, selectedstudent);
 
+        this.setState((currentState) => {
+            return{
+                students: currentState.students.filter((student) => student.id !== parseInt(id))
+                        .concat(selectedstudent)
+            }
+        });
+
+    
     }
 
     render() { 
@@ -79,11 +75,13 @@ class Students extends Component
             <div>
                 <h2 className='block-title'>Studenten</h2>
                 <div className='form-area'>
-                    <StudentForm list = {this.state.students}/>
+                    <StudentForm list = {this.state.students.sort((a,b) => a.name > b.name ? 1 : -1).filter((student) => student.grade === '')}
+                                onScoreStudent={this.adjustScoreStudent}
+                    />
                 </div>
                 <div>
                     <StudentOverview 
-                        list = {this.state.students}
+                        list = {this.state.students.sort((a,b) => a.name > b.name ? 1 : -1)}
                     />
                 </div>
                 
