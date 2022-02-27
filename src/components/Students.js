@@ -45,11 +45,11 @@ class Students extends Component
         super(props)
         this.state = {
             students: [
-                {id: 1, name: 'John Doe', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25"},
-                {id: 2, name: 'Jane Doe', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
-                {id: 3, name: 'John Doe 2', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
-                {id: 4, name: 'Jane Doe 2', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25"},
-                {id: 5, name: 'John Doe 3', grade: '', thumb:'./images/placeholder-person.png', color1:"#009cab", color2:"#f04c25" },
+                {id: 1, name: 'John Doe', grade: '', thumb:'./images/eagle.png', color1:"#009cab", color2:"#f04c25"},
+                {id: 2, name: 'Jane Doe', grade: '', thumb:'./images/hippo.png', color1:"#009cab", color2:"#f04c25" },
+                {id: 3, name: 'John Doe 2', grade: '', thumb:'./images/monkey.png', color1:"#009cab", color2:"#f04c25" },
+                {id: 4, name: 'Jane Doe 2', grade: '', thumb:'./images/wolf.png', color1:"#009cab", color2:"#f04c25"},
+                {id: 5, name: 'John Doe 3', grade: '', thumb:'./images/rhino.png', color1:"#009cab", color2:"#f04c25" },
             ]
         }
 
