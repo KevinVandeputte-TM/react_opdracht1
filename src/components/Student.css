@@ -21,7 +21,7 @@
     border-radius: 0 0 15px 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 225px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     background-color: white;
     margin-right: 10px;
 }
@@ -30,13 +30,31 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: linear-gradient(60deg, #2AAA8A, #4169E1);
     padding: 5px;
     margin-top: -45px;
 }
 
 .card h3{
     margin: 5px 0;
+}
+
+.point-area{
+    width: auto;
+    margin:  0px;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.grades{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.control-area{
+    display: flex;
+    justify-content: space-around !important;
+    margin-top: 5px;
 }
 
 .block-title{
@@ -78,4 +96,46 @@
 
 .btn{
     display: block;
+}
+
+.ctrl-btn{    
+    
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    background-color: white;
+    border-color: #575757;
+    border: 1px solid transparent;
+    color: #575757;
+    
+}
+
+.ctrl-btn-clear{    
+    
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f04c25;
+    border-color: #f04c25;
+    border: 1px solid transparent;
+    color: white; 
+}
+
+.ctrl-btn:hover{
+    background-color: #575757;
+    border-color: #575757;
+    color:whitesmoke;
+}
+
+.ctrl-btn-clear:hover{
+    background-color:  #009cab;
+    border-color:  #009cab;
 }
