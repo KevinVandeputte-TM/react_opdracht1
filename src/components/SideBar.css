@@ -2,16 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .title span{
     padding-left: 10px;
+
 }
 
 .sidebar{
+    font-family: 'Fira Sans', sans-serif;
     margin: 5px;
-    margin-left: 20px !important;
     display: flex;
     max-width: 15%;
     height: 95vh;
@@ -22,6 +23,7 @@
 
 .content{
     padding: 10px;
+    font-size: 14px;
 }
 
 .bold{
