@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import Students from './components/Students';
 import SideBar from './components/SideBar';
@@ -15,10 +15,27 @@ function App() {
     campus: 'Campus Geel'
   }]
 
+  const status = [
+    {id:1, status: "Gestart"},
+    {id:2, status: "Afgelopen"}
+  ]
+
+  const [courseStatus, setCourseStatus] = useState(status[0].id)
+
+  function handleStatusChange(id){
+    console.log("KOMT BINNEN: ", id)
+    setCourseStatus(parseInt(id))
+    console.log('Dit is de nieuwe status:', courseStatus)
+  }
+
+
   return ( 
     <div className='row'>
-      <SideBar 
+      <SideBar
+        courseStatus = {courseStatus} 
         courseInfo = {courseInfo}
+        statuses = {status}
+        onChangeStatus={handleStatusChange}
       />
       <Students />
 

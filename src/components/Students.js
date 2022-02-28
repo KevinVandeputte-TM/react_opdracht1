@@ -122,9 +122,9 @@ class Students extends Component
     render() { 
         return (
             <div>
-                <h2 className='block-title'>Studenten</h2>
+                
                 <div className='form-area'>
-                    <StudentForm list = {this.state.students.sort((a,b) => a.name > b.name ? 1 : -1).filter((student) => student.grade === '')}
+                    <StudentForm list = {this.state.students.sort((a,b) => a.name > b.name ? 1 : -1)}
                                 onScoreStudent={this.adjustScoreStudent}
                     />
                 </div>
