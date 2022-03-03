@@ -26,7 +26,7 @@ const Map = () => {
                 />
 
                 {infoCampus && (
-                    <InfoWindow position={{lat:51.1609429, lng: 4.961399}}
+                    <InfoWindow position={{lat:51.165, lng: 4.961399}}
                                 onCloseClick={() => {
                                     setInfoCampus(null)
                                 }}            
@@ -55,9 +55,7 @@ const SideBar = (props) => {
         props.onChangeStatus(e.target.value)
     }
 
-     const status = props.courseStatus
-
-     if(status !== 1){
+     if(props.courseClosed){
          return(
             <div className='sidebar'>
                 <div className='content'>
