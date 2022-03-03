@@ -180,7 +180,7 @@ function App() {
       />
       <TaskList 
         tasks = {tasks}
-        courseInfo = {courseInfo}
+        courseClosed = {courseClosed}
         onDrag = {handleDragItem}
         onToggleComplete = {handleToggleCompletion}
         newTask = {newTask}
