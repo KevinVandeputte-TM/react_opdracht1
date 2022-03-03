@@ -22,7 +22,14 @@ const StudentForm = (props) => {
         setScore('')
     }
 
-    
+    if (props.courseClosed){
+        return (
+            <div>
+                <h3>Overzicht studenten</h3>
+            </div>
+        )
+    }
+
     return ( 
         <form className='formulier' onSubmit={ (e) => handleSubmit(e)}>
             <div className='row'>
