@@ -9,23 +9,21 @@ function App() {
   //----- SET ALL DATA NEED FOR APPLICATION -----// 
   //-- course info
   const courseInfo = [{
-    teacher: "Florian Smeyers",
-    thumb:'./images/panther.png',
+    teacher: "Theo Fox",
     class: '3WT',
     topic: 'React',
     logo:'./images/feature-react.png',
-    target: "De student ontwikkelt een Single Page Applicatie in React conform de ontwerpprincipes van de Redux state container met een ASP.NET Web API backend. De student deelt componenten op in Presentational en Container Components. De student gebruikt de middleware Redux-Thunk om in Redux asynchrone API calls uit te voeren.",
-    credits: 4,
-    campus: 'Campus Geel'
+    target: "React maakt het creëren van interactieve UIs een aangename ervaring. Ontwerp eenvoudige datapresentaties voor elke state van uw applicatie. React zal alleen de juiste componenten bijwerken en renderen wanneer uw data verandert.",
+    credits: 4
   }]
 
   //-- students array
   const [students, setStudents] = useState([
-    {id: 1, name: 'John Doe', grade: '', thumb:'./images/eagle.png', color1:"#009cab", color2:"#f04c25"},
-    {id: 2, name: 'Jane Doe', grade: '', thumb:'./images/hippo.png', color1:"#009cab", color2:"#f04c25" },
-    {id: 3, name: 'John Doe 2', grade: '', thumb:'./images/monkey.png', color1:"#009cab", color2:"#f04c25" },
-    {id: 4, name: 'Jane Doe 2', grade: '', thumb:'./images/wolf.png', color1:"#009cab", color2:"#f04c25"},
-    {id: 5, name: 'John Doe 3', grade: '', thumb:'./images/rhino.png', color1:"#009cab", color2:"#f04c25" },
+    {id: 1, name: 'Gaston Mertens', grade: '', thumb:'./images/eagle.png', color1:"#009cab", color2:"#f04c25"},
+    {id: 2, name: 'Natacha Green', grade: '', thumb:'./images/hippo.png', color1:"#009cab", color2:"#f04c25" },
+    {id: 3, name: 'Johan De Smet', grade: '', thumb:'./images/monkey.png', color1:"#009cab", color2:"#f04c25" },
+    {id: 4, name: 'Julia Simon', grade: '', thumb:'./images/wolf.png', color1:"#009cab", color2:"#f04c25"},
+    {id: 5, name: 'Niels Maes', grade: '', thumb:'./images/rhino.png', color1:"#009cab", color2:"#f04c25" },
   ])
 
   //-- course status for selectlist
@@ -39,10 +37,10 @@ function App() {
 
   //-- tasksdata
   const [tasks, setTasks] = useState([
-    {id:'1', description:'Project 1 omschrijving opladen', completed: true},
-    {id:'2', description:'Test voorbereiden', completed: false},
-    {id:'3', description:'Project 2 omschrijving afwerken', completed: false},
-    {id:'4', description:'Verbeteren', completed: false}
+    {id:'1', description:'Lorem ipsum', completed: true},
+    {id:'2', description:'Consectetur adipiscing', completed: false},
+    {id:'3', description:'Nemo enim ipsam', completed: false},
+    {id:'4', description:'Quis autem vel', completed: false}
   ])
 
   //-- new task
