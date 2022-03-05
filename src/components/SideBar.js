@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps';
 import './SideBar.css';
-import mapStyles from './mapStyles';
+import MapStyles from './mapStyles';
 
 
 const Map = () => {
@@ -13,7 +13,7 @@ const Map = () => {
             <GoogleMap 
                 defaultZoom={12} 
                 defaultCenter={{lat:51.16, lng:4.96}}
-                defaultOptions={{styles: mapStyles}}
+                defaultOptions={{styles: MapStyles}}
             >
                 <Marker position={{lat:51.1609429, lng: 4.961399}}
                         icon={{
@@ -60,7 +60,7 @@ const SideBar = (props) => {
          return(
             <div className='sidebar'>
                 <div className='content'>
-                    <h4 className='title'><img src={props.courseInfo[0].logo} height='27px'/> <span>{props.courseInfo[0].class} - {props.courseInfo[0].topic} ({new Date().getFullYear()})</span></h4>
+                    <h4 className='title'><img src={props.courseInfo[0].logo} alt="logo" height='27px'/> <span>{props.courseInfo[0].class} - {props.courseInfo[0].topic} ({new Date().getFullYear()})</span></h4>
                     <h5>Cursus afgelopen</h5>
                     <p><span className='bold'>Docent:<br/></span>{props.courseInfo[0].teacher} </p>
                     <p><span className='bold'>Studiepunten:<br/></span> {props.courseInfo[0].credits}</p>
@@ -83,7 +83,7 @@ const SideBar = (props) => {
         return (
             <div className='sidebar'>
                 <div className='content'>
-                    <h4 className='title'><img src={props.courseInfo[0].logo} height='27px'/> <span>{props.courseInfo[0].class} - {props.courseInfo[0].topic} ({new Date().getFullYear()})</span></h4>
+                    <h4 className='title'><img src={props.courseInfo[0].logo} alt='logo' height='27px'/> <span>{props.courseInfo[0].class} - {props.courseInfo[0].topic} ({new Date().getFullYear()})</span></h4>
                     <select value={editable} className='form-control' onChange={(e) => onChange(e)}>
                         {props.statuses.map((status) =>(
                             <option key={status.id} value={status.id}>

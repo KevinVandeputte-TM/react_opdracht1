@@ -93,7 +93,7 @@ function App() {
     //get the current grade of the selected student
     var currentGrade = selectedstudent[0].grade
     if (currentGrade === ''){
-      var currentGrade = 0
+      currentGrade = 0
     } else {
       currentGrade = parseFloat(currentGrade)
     }
@@ -102,7 +102,7 @@ function App() {
     if(operator === '+'){
       var score = currentGrade + 0.1
     } else {
-      var score = currentGrade - 0.1
+      score = currentGrade - 0.1
     }
     
     // check boundaries of grade

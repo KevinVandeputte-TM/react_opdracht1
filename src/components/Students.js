@@ -1,4 +1,4 @@
-import React, { Children, Component } from 'react';
+import React from 'react';
 import StudentForm from './StudentForm'
 import './Student.css'
 
@@ -23,7 +23,7 @@ const StudentCard = (props) => {
     if (props.courseClosed){
         return(
             <div className='card'>
-            <img style={{backgroundImage:`linear-gradient(${props.student.color1},${props.student.color2})`}} src={props.student.thumb}/>
+            <img style={{backgroundImage:`linear-gradient(${props.student.color1},${props.student.color2})`}} src={props.student.thumb} alt='avatar'/>
             <h3>{props.student.name}</h3>
             <div style={{width: '100%'}}>
                 <hr />
@@ -36,7 +36,7 @@ const StudentCard = (props) => {
     } else {
         return (  
             <div className='card'>
-                <img style={{backgroundImage:`linear-gradient(${props.student.color1},${props.student.color2})`}} src={props.student.thumb}/>
+                <img style={{backgroundImage:`linear-gradient(${props.student.color1},${props.student.color2})`}} src={props.student.thumb} alt='avatar'/>
                 <h3>{props.student.name}</h3>
                 <div style={{width: '100%'}}>
                     <hr />
