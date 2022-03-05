@@ -24,8 +24,23 @@
 .content{
     padding: 10px;
     font-size: 14px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 
 .bold{
     font-weight: bold;
 }
+
+.map-text{
+    margin: 0px;
+}
+
+.map-ref{
+    margin-top: 5px;
+}
+
+
