@@ -24,6 +24,7 @@ function App() {
     {id: 3, name: 'Johan De Smet', grade: '', thumb:'./images/monkey.png', color1:"#009cab", color2:"#f04c25" },
     {id: 4, name: 'Julia Simon', grade: '', thumb:'./images/wolf.png', color1:"#009cab", color2:"#f04c25"},
     {id: 5, name: 'Niels Maes', grade: '', thumb:'./images/rhino.png', color1:"#009cab", color2:"#f04c25" },
+    {id: 6, name: 'Theo Cox', grade: '', thumb:'./images/panda.png', color1:"#009cab", color2:"#f04c25" },
   ])
 
   //-- course status for selectlist
