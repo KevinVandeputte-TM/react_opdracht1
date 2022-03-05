@@ -35,7 +35,7 @@ const Map = () => {
                             <h4>Campus Geel</h4>
                             <p className='map-text'>Kleinhoefstraat 4</p>
                             <p className='map-text'>2440 Geel</p>
-                            <a className='map-ref' href='https://www.thomasmore.be/campussen/campus-geel' target="_blank">meer info</a>
+                            <a className='map-ref' href='https://www.thomasmore.be/campussen/campus-geel' rel="noreferrer" target="_blank">meer info</a>
                         </div>
                     </InfoWindow>
                 )}
