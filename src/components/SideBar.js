@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps';
 import './SideBar.css';
-// import mapStyles from './mapStyles';
+import mapStyles from './mapStyles';
 
 
 const Map = () => {
@@ -13,7 +13,7 @@ const Map = () => {
             <GoogleMap 
                 defaultZoom={12} 
                 defaultCenter={{lat:51.16, lng:4.96}}
-                // defaultOptions={{styles: mapStyles}}
+                defaultOptions={{styles: mapStyles}}
             >
                 <Marker position={{lat:51.1609429, lng: 4.961399}}
                         icon={{
@@ -33,8 +33,9 @@ const Map = () => {
                     >
                         <div>
                             <h4>Campus Geel</h4>
-                            <p>Kleinhoefstraat 4</p>
-                            <p>2440 Geel</p>
+                            <p className='map-text'>Kleinhoefstraat 4</p>
+                            <p className='map-text'>2440 Geel</p>
+                            <a className='map-ref' href='https://www.thomasmore.be/campussen/campus-geel' target="_blank">meer info</a>
                         </div>
                     </InfoWindow>
                 )}
@@ -67,7 +68,7 @@ const SideBar = (props) => {
                     <div>
                         <p><span className='bold'>Locatie: </span></p>
                     </div>
-                    <div style={{width: '100%', height:'225px'}}>
+                    <div style={{width: '100%' , height:'100%'}}>
                         <WrappedMap 
                             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCWpUsDL5UWEJSSU48CITkz3TrygUevEi4`}
                             loadingElement={<div style={{height: '100%'}}/>}
@@ -97,7 +98,7 @@ const SideBar = (props) => {
                     <div>
                         <p><span className='bold'>Locatie: </span></p>
                     </div>
-                    <div style={{width: '100%', height:'225px'}}>
+                    <div className='bottom' style={{width: '100%', height: '100%'}}>
                         <WrappedMap 
                             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCWpUsDL5UWEJSSU48CITkz3TrygUevEi4`}
                             loadingElement={<div style={{height: '100%'}}/>}

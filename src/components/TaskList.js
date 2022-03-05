@@ -3,11 +3,11 @@ import './TaskList.css';
 
 const InputTask = (props) => {
     return ( 
-        <div>
-            <div>
+        <div className='input-field'>
+            <div className='center'>
                 <input
                     type = "text"
-                    className='form-control'
+                    className='form-control-task'
                     placeholder='Nieuwe taak'
                     onChange={props.onInputTask}
                     value={props.newTask}
@@ -24,7 +24,7 @@ const InputTask = (props) => {
 
 const TaskItems = (props) => {
     return ( 
-        <div>
+        <div className='center-items'>
             <DragDropContext onDragEnd = {props.onDrag}>
                 <Droppable droppableId="tasks">
                     {(provided) => (
@@ -59,7 +59,8 @@ const TaskList = (props) => {
 
     if(props.courseClosed){
         return(
-            <div>
+            <div className='taskbar flex-column'>
+                <h4 className='title'><span>To do's</span></h4>
                 <TaskItems onDrag={props.onDrag}
                     tasks = {props.tasks}
                     onToggleComplete = {props.onToggleComplete}
@@ -69,20 +70,18 @@ const TaskList = (props) => {
     }
 
     return ( 
-        <div>
-            <div>
-                <InputTask 
-                    onInputTask = {props.onInputTask}
-                    newTask = {props.newTask}
-                    addTask = {props.addTask}
-                />
-            </div>
-            <div>
-                <TaskItems onDrag={props.onDrag}
-                    tasks = {props.tasks}
-                    onToggleComplete = {props.onToggleComplete}
-                />               
-            </div>
+        <div className='taskbar flex-column'>
+        <h4 className='title'><span>To do's</span></h4>
+            <InputTask 
+                onInputTask = {props.onInputTask}
+                newTask = {props.newTask}
+                addTask = {props.addTask}
+            />
+
+            <TaskItems onDrag={props.onDrag}
+                tasks = {props.tasks}
+                onToggleComplete = {props.onToggleComplete}
+            />               
         </div>
      );
 }

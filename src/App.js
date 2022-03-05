@@ -29,7 +29,7 @@ function App() {
   //-- course status for selectlist
   const status = [
     {id:1, status: "Gestart"},
-    {id:2, status: "Afgelopen"}
+    {id:2, status: "Cursus afsluiten"}
   ]
 
   //-- for conditional rendenring
